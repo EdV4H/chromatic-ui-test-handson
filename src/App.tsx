@@ -3,7 +3,7 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <p>Hello Vite + React + Storybook + Chromatic!</p>
+      <p>Hello Vite + React + ESLint + Storybook + Chromatic!</p>
     </div>
   );
 }
