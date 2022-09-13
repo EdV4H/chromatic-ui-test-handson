@@ -1,55 +1,32 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true,
+    es2021: true
   },
-  extends: [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended",
-  ],
+  extends: ["eslint:recommended", "plugin:react/recommended", "plugin:@typescript-eslint/recommended", "plugin:storybook/recommended"],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaFeatures: {
-      jsx: true,
+      jsx: true
     },
     ecmaVersion: "latest",
-    sourceType: "module",
+    sourceType: "module"
   },
-  plugins: [
-    "react",
-    "@typescript-eslint",
-    "import",
-    "unused-import",
-    "prettier",
-  ],
+  plugins: ["react", "@typescript-eslint", "import", "unused-import", "prettier"],
   rules: {
     // https://github.com/sweepline/eslint-plugin-unused-imports
     "@typescript-eslint/no-unused-vars": "off",
     "unused-imports/no-unused-imports": "error",
-    "unused-imports/no-unused-vars": [
-      "warn",
-      {
-        vars: "all",
-        varsIgnorePattern: "^_",
-        args: "after-used",
-        argsIgnorePattern: "^_",
-      },
-    ],
+    "unused-imports/no-unused-vars": ["warn", {
+      vars: "all",
+      varsIgnorePattern: "^_",
+      args: "after-used",
+      argsIgnorePattern: "^_"
+    }],
     // https://github.com/import-js/eslint-plugin-import
-    "import/order": [
-      "error",
-      {
-        groups: [
-          "builtin",
-          "external",
-          "internal",
-          "parent",
-          "sibling",
-          "type",
-        ],
-        "newlines-between": "always",
-      },
-    ],
-  },
+    "import/order": ["error", {
+      groups: ["builtin", "external", "internal", "parent", "sibling", "type"],
+      "newlines-between": "always"
+    }]
+  }
 };
